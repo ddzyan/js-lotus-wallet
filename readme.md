@@ -7,10 +7,6 @@ lotus 钱包 demo ，支持如下功能：
 - 交易发送
 - 交易提醒
 
-```shell
-npm  install
-```
-
 创建 config/index.js 配置
 
 ```js
@@ -62,4 +58,10 @@ module.exports = {
     },
   },
 };
+```
+
+```shell
+npm  install
+
+npm start
 ```
