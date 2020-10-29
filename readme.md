@@ -7,7 +7,23 @@ lotus 钱包 demo ，支持如下功能：
 - 交易发送
 - 交易提醒
 
-创建 config/index.js 配置
+只支持在 ubuntu 编译运行
+
+## 更新内容
+
+- 优化区块同步逻辑，并且做了持久化同步和交易唯一性存储 [2020-10-29]
+
+## 使用
+
+### 依赖下载
+
+```sh
+sudo apt-get install ubuntu-make
+```
+
+### 配置文件
+
+创建 config/index.js 配置，根据 lotus 环境修改
 
 ```js
 module.exports = {
@@ -60,8 +76,21 @@ module.exports = {
 };
 ```
 
+在 mysql 中创建 filecoin 库，初始化配置
+
+```sql
+INSERT INTO `filecoin`.`sync`(`id`, `latest_height`, `current_height`, `created_at`, `updated_at`) VALUES (1, 0, 1, '2020-10-29 23:14:06', '2020-10-29 23:14:09');
+
+```
+
+### 启动
+
 ```shell
 npm  install
 
+# 同步数据库表结构
+npm run syncDB
+
+# 启动
 npm start
 ```

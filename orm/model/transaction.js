@@ -59,10 +59,15 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         comment: '用户选择支付给矿工的手续费率',
       },
-      cid: {
+      block_cid: {
         type: DataTypes.STRING(255),
         allowNull: false,
-        comment: 'deal cid',
+        comment: '区块 cid',
+      },
+      deal_cid: {
+        type: DataTypes.STRING(255),
+        allowNull: false,
+        comment: '消息 cid',
       },
       height: {
         type: DataTypes.INTEGER.UNSIGNED,
@@ -83,8 +88,8 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
-      timestamps: false,
       tableName: 'transaction',
+      comment: '交易表',
     }
   );
 
