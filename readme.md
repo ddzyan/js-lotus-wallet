@@ -96,6 +96,9 @@ npm  install
 # 同步数据库表结构
 npm run syncDB
 
-# 启动
+# 开发环境启动
+npm run debug
+
+# 后台启动
 npm start
 ```
