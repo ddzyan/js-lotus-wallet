@@ -79,6 +79,8 @@ module.exports = {
 在 mysql 中创建 filecoin 库，初始化配置
 
 ```sql
+create DATABASE filecoin DEFAULT CHARACTER set utf8mb4 COLLATE utf8mb4_general_ci;
+
 INSERT INTO `filecoin`.`sync`(`id`, `latest_height`, `current_height`, `created_at`, `updated_at`) VALUES (1, 0, 1, '2020-10-29 23:14:06', '2020-10-29 23:14:09');
 
 ```
@@ -86,6 +88,9 @@ INSERT INTO `filecoin`.`sync`(`id`, `latest_height`, `current_height`, `created_
 ### 启动
 
 ```shell
+npm install -g pm2
+
+
 npm  install
 
 # 同步数据库表结构

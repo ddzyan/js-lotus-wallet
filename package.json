@@ -1,10 +1,11 @@
 {
-  "name": "lotus-js",
+  "name": "lotus-wallet",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js",
-    "syncDB":"node ./orm/syncDB.js"
+    "debug": "node ./index.js",
+    "syncDB": "node ./orm/syncDB.js",
+    "start": "pm2 start ./index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,7 @@
   "directories": {
     "lib": "lib"
   },
-  "description": "",
+  "description": "lotus 钱包，具备交易同步，创建交易，签名交易，发送交易和钱包创建等功能",
   "dependencies": {
     "bignumber.js": "^9.0.1",
     "filecoin.js": "^0.0.3-alpha",
