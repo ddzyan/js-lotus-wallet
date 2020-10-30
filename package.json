@@ -5,7 +5,7 @@
   "scripts": {
     "debug": "node ./index.js",
     "syncDB": "node ./orm/syncDB.js",
-    "start": "pm2 start ./index.js"
+    "start": "pm2 start -f ./start.config.js"
   },
   "keywords": [],
   "author": "",
