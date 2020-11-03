@@ -1,0 +1,11 @@
+2020-11-03 16:10 +08:00: JsonRpcError: looking for tipset with height greater than start point
+2020-11-03 16:10 +08:00:     at new JsonRpcError (/home/bill/work-space/my-github/js-lotus-wallet/node_modules/filecoin.js/builds/dist/connectors/Connector.js:32:28)
+2020-11-03 16:10 +08:00:     at HttpJsonRpcConnector.<anonymous> (/home/bill/work-space/my-github/js-lotus-wallet/node_modules/filecoin.js/builds/dist/connectors/HttpJsonRpcConnector.js:136:35)
+2020-11-03 16:10 +08:00:     at step (/home/bill/work-space/my-github/js-lotus-wallet/node_modules/filecoin.js/builds/dist/connectors/HttpJsonRpcConnector.js:57:23)
+2020-11-03 16:10 +08:00:     at Object.next (/home/bill/work-space/my-github/js-lotus-wallet/node_modules/filecoin.js/builds/dist/connectors/HttpJsonRpcConnector.js:38:53)
+2020-11-03 16:10 +08:00:     at fulfilled (/home/bill/work-space/my-github/js-lotus-wallet/node_modules/filecoin.js/builds/dist/connectors/HttpJsonRpcConnector.js:29:58)
+2020-11-03 16:10 +08:00:     at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+2020-11-03 16:10 +08:00:   code: 1,
+2020-11-03 16:10 +08:00:   data: undefined
+2020-11-03 16:10 +08:00: }
+2020-11-03 16:10 +08:00: looking for tipset with height greater than start point
