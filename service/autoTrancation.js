@@ -1,5 +1,5 @@
 const EventEmitter = require('events');
-const sysBlock = require('../lib/autoTranctions');
+const sysBlock = require('../lib/sysBlock');
 const blockEmitter = new EventEmitter();
 
 const errorHandle = function (error) {
