@@ -19,6 +19,16 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         comment: '区块同步高度',
       },
+      step: {
+        type: DataTypes.TINYINT.UNSIGNED,
+        allowNull: false,
+        comment: '同步步长',
+      },
+      backward: {
+        type: DataTypes.TINYINT.UNSIGNED,
+        allowNull: false,
+        comment: '区块落后高度',
+      },
       created_at: {
         type: DataTypes.DATE,
         allowNull: true,
@@ -34,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       tableName: 'sync',
-      comment:"区块同步高度表"
+      comment: '区块同步高度表',
     }
   );
 

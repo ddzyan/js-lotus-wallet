@@ -16,8 +16,10 @@
   "description": "lotus 钱包，具备交易同步，创建交易，签名交易，发送交易和钱包创建等功能",
   "dependencies": {
     "bignumber.js": "^9.0.1",
+    "dayjs": "^1.9.6",
     "filecoin.js": "^0.0.3-alpha",
     "mysql2": "^2.2.5",
+    "randomstring": "^1.1.5",
     "sequelize": "^6.3.5"
   }
 }
