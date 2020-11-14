@@ -29,8 +29,7 @@ sudo apt-get install ubuntu-make
 module.exports = {
   lotus: {
     url: 'http://127.0.0.1:1234/rpc/v0',
-    token:
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJyZWFkIiwid3JpdGUiLCJzaWduIl19.crmGqRVPmgLrNgYveL6GhwF07_tVJGHK1xSaEaPy-VE',
+    token: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
   },
   mysql: {
     username: 'test',
@@ -67,11 +66,16 @@ module.exports = {
           dateStrings: true,
           typeCast: true,
         },
-        timestamps: true,
+        timestamps: false,
       },
       // isolationLevel: Transaction.ISOLATION_LEVELS.REPEATABLE_READ,
       // operatorsAliases: false,
     },
+  },
+  sync: {
+    method: [0],
+    checkAccount: false,
+    timer: 30,
   },
 };
 ```
