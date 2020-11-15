@@ -1,4 +1,5 @@
 const EventEmitter = require('events');
+const { getRandom } = require('../util');
 const sysBlock = require('../lib/sysBlock');
 const blockEmitter = new EventEmitter();
 
@@ -9,13 +10,14 @@ const errorHandle = function (error) {
 
 blockEmitter.on('autoTranctions', async () => {
   console.time('[autoTranctions start]');
+  const uid = getRandom();
   try {
-    await sysBlock.start();
+    await sysBlock.start(uid);
   } catch (error) {
     console.error('区块同步异常', error);
   } finally {
-    console.timeEnd('[autoTranctions start]');
-    blockEmitter.emit('autoTranctions', '同步结束 \n');
+    console.timeEnd('[autoTranctions start]', '\n');
+    blockEmitter.emit(`autoTranctions`);
   }
 });
 

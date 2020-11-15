@@ -5,7 +5,8 @@
   "scripts": {
     "debug": "node ./index.js",
     "syncDB": "node ./orm/syncDB.js",
-    "start": "pm2 start -f ./start.config.js"
+    "start": "pm2 start -f ./start.config.js",
+    "sync": "node ./service/autoTrancation.js"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "bignumber.js": "^9.0.1",
     "dayjs": "^1.9.6",
     "filecoin.js": "^0.0.3-alpha",
+    "ioredis": "^4.19.2",
     "mysql2": "^2.2.5",
     "randomstring": "^1.1.5",
     "sequelize": "^6.3.5"
