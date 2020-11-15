@@ -16,7 +16,8 @@ blockEmitter.on('autoTranctions', async () => {
   } catch (error) {
     console.error('区块同步异常', error);
   } finally {
-    console.timeEnd('[autoTranctions start]', '\n');
+    console.timeEnd('[autoTranctions start]');
+    console.log('-----------------------\n');
     blockEmitter.emit(`autoTranctions`);
   }
 });
