@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'lotus-wallet', // 进程名称
-      script: 'index.js', // 启动脚本
+      script: './service/autoTrancation.js', // 启动脚本
       watch: false, // 默认关闭watch 可替换为 ['src']
       log_date_format: 'YYYY-MM-DD HH:mm Z', // 日志格式
       ignore_watch: ['node_modules', 'public', 'logs'],
