@@ -42,22 +42,22 @@ module.exports = (sequelize, DataTypes) => {
       value: {
         type: DataTypes.DECIMAL(36, 18).UNSIGNED,
         allowNull: false,
-        comment: '金额，已经除以10^18',
+        comment: '金额 单位为file',
       },
       gas_limit: {
         type: DataTypes.BIGINT.UNSIGNED,
         allowNull: true,
-        comment: '该笔交易能消耗的最大Gas量',
+        comment: '该笔交易能消耗的最大Gas量,单位为nano file',
       },
       gas_fee_cap: {
         type: DataTypes.BIGINT.UNSIGNED,
         allowNull: true,
-        comment: '根据区块链网络拥堵状况实时更新的基础手续费率',
+        comment: '根据区块链网络拥堵状况实时更新的基础手续费率,单位为nano file',
       },
       gas_premium: {
         type: DataTypes.BIGINT.UNSIGNED,
         allowNull: false,
-        comment: '用户选择支付给矿工的手续费率',
+        comment: '用户选择支付给矿工的手续费率,单位为nano file',
       },
       block_cid: {
         type: DataTypes.STRING(255),
