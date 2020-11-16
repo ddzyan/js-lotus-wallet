@@ -1,5 +1,5 @@
 const db = require('./model');
-const { unitConversion } = require('../util');
+
 module.exports = {
   /**
    * @description 获取钱包同步配置
@@ -35,8 +35,7 @@ module.exports = {
    * @param {Object} parma
    */
   async addTransaction(parma) {
-    let { dealCid, blockCid, blockHeight, Version, To, From, Nonce, GasLimit, GasFeeCap, GasPremium, Method, Value } = parma;
-    Value = unitConversion(Value);
+    const { dealCid, blockCid, blockHeight, Version, To, From, Nonce, GasLimit, GasFeeCap, GasPremium, Method, Value } = parma;
     const transactionRes = await db.transaction.findCreateFind({
       where: {
         deal_cid: dealCid,

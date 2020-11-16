@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "debug": "node ./index.js",
     "syncDB": "node ./orm/syncDB.js",
     "start": "pm2 start -f ./start.config.js",
     "sync": "node ./service/autoTrancation.js"

@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         comment: '发送地址',
       },
       method: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.TINYINT(2),
         allowNull: false,
         comment: '交易类型',
       },
@@ -40,22 +40,22 @@ module.exports = (sequelize, DataTypes) => {
         comment: 'Nonce',
       },
       value: {
-        type: DataTypes.FLOAT(40, 18),
+        type: DataTypes.DECIMAL(36, 18).UNSIGNED,
         allowNull: false,
         comment: '金额，已经除以10^18',
       },
       gas_limit: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.BIGINT.UNSIGNED,
         allowNull: true,
         comment: '该笔交易能消耗的最大Gas量',
       },
       gas_fee_cap: {
-        type: DataTypes.STRING(255),
+        type: DataTypes.BIGINT.UNSIGNED,
         allowNull: true,
         comment: '根据区块链网络拥堵状况实时更新的基础手续费率',
       },
       gas_premium: {
-        type: DataTypes.STRING(255),
+        type: DataTypes.BIGINT.UNSIGNED,
         allowNull: false,
         comment: '用户选择支付给矿工的手续费率',
       },
